@@ -1,0 +1,164 @@
+.bs-icon {
+  --bs-icon-size: .75rem;
+  display: flex;
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+  font-size: var(--bs-icon-size);
+  width: calc(var(--bs-icon-size) * 2);
+  height: calc(var(--bs-icon-size) * 2);
+  color: var(--bs-primary);
+}
+
+.bs-icon-xs {
+  --bs-icon-size: 1rem;
+  width: calc(var(--bs-icon-size) * 1.5);
+  height: calc(var(--bs-icon-size) * 1.5);
+}
+
+.bs-icon-sm {
+  --bs-icon-size: 1rem;
+}
+
+.bs-icon-md {
+  --bs-icon-size: 1.5rem;
+}
+
+.bs-icon-lg {
+  --bs-icon-size: 2rem;
+}
+
+.bs-icon-xl {
+  --bs-icon-size: 2.5rem;
+}
+
+.bs-icon.bs-icon-primary {
+  color: var(--bs-white);
+  background: var(--bs-primary);
+}
+
+.bs-icon.bs-icon-primary-light {
+  color: var(--bs-primary);
+  background: rgba(var(--bs-primary-rgb), .2);
+}
+
+.bs-icon.bs-icon-semi-white {
+  color: var(--bs-primary);
+  background: rgba(255, 255, 255, .5);
+}
+
+.bs-icon.bs-icon-rounded {
+  border-radius: .5rem;
+}
+
+.bs-icon.bs-icon-circle {
+  border-radius: 50%;
+}
+
+btn-hover:hover {
+  background: var(--bs-btn-border-color);
+}
+
+btn-hover:hover {
+  background-color: var(--bs-btn-border-color);
+}
+
+div {
+}
+
+.tab-scroller {
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+
+.joinus-paragraph {
+  text-align: left;
+}
+
+.joinus-column {
+  padding: 10px;
+}
+
+.joinus-box {
+  background: whitesmoke;
+  padding: 10px;
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-column {
+  min-width: 360px;
+  height: 400px;
+}
+
+.carousel-text {
+  border-color: var(--bs-secondary-color);
+  color: var(--bs-secondary-color);
+  background: var(--bs-secondary-bg);
+  padding: 35px;
+  height: 400px;
+}
+
+.carousel-image {
+  width: auto;
+  height: 100%;
+  border: 5px solid var(--bs-primary-text-emphasis);
+}
+
+.carousel-image-holder {
+  height: 400px;
+  text-align: center;
+  background: var(--bs-secondary-bg);
+}
+
+.carousel-row {
+  width: 100%;
+  height: 400px;
+}
+
+.programme-event {
+  width: 100%;
+  height: 100%;
+  background: whitesmoke;
+  padding: 32px;
+  text-align: center;
+}
+
+.concert-paragraph {
+  font-size: 20px;
+  margin-bottom: 0px;
+}
+
+a {
+}
+
+.concert-link {
+  margin-top: 10px;
+  display: block;
+}
+
+.concert-poster {
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  text-align: center;
+  margin: auto;
+}
+
+.paragraph-members-dates {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.programme-event-centered {
+  width: 100%;
+  height: 100%;
+  background: whitesmoke;
+  text-align: center;
+  display: flex;
+}
+
+.profile-shadow {
+  box-shadow: 0px 0px 15px var(--bs-primary-text-emphasis);
+}
+
