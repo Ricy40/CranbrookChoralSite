@@ -43,6 +43,15 @@
             </div>
         </div>
     </nav>
+    {% if message_sent %}
+        <div class="alert alert-success" role="alert" style="max-width: 600px; text-align: center; margin: 100px auto -50px;">
+            Message sent successfully.
+        </div>
+    {% elif message_failed %}
+        <div class="alert alert-danger" role="alert" style="max-width: 600px; text-align: center; margin: 100px auto -50px;">
+            Message failed to send.<br>Your word may not be a real word or there was a server error.
+        </div>
+    {% endif %}
     <header class="text-center text-white masthead" style="padding: 114px 0px 148px;padding-top: 0px;background: #ffffff00;padding-bottom: 0px;">
         <h1 class="masthead-heading mb-0" style="margin: 100px;color: var(--bs-emphasis-color);font-size: 65px;">Members' Area</h1>
     </header>
@@ -138,7 +147,7 @@
                                     </tr>
                                     <tr style="background: rgba(255,255,255,0);">
                                         <td style="background: rgba(255,255,255,0);">Bass</td>
-                                        <td style="background: rgba(255,255,255,0);">Alistair Ramsey</td>
+                                        <td style="background: rgba(255,255,255,0);">Alistair Ramsay</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -168,7 +177,7 @@
                                     </tr>
                                     <tr style="background: rgba(255,255,255,0);">
                                         <td style="background: rgba(255,255,255,0);">Membership</td>
-                                        <td style="background: rgba(255,255,255,0);">Beth Reid</td>
+                                        <td style="background: rgba(255,255,255,0);">Jo Lawrence</td>
                                     </tr>
                                     <tr style="background: rgba(255,255,255,0);">
                                         <td style="background: rgba(255,255,255,0);">Librarian</td>
@@ -233,12 +242,23 @@
                                 <div class="col-md-8 col-lg-6 col-xl-5 col-xxl-4" style="width: 100%;">
                                     <div class="card mb-1" style="margin-bottom: 0px;">
                                         <div class="card-body p-sm-5">
-                                            <h2 class="modal-title text-center">Contact Us</h2>
-                                            <form method="post">
-                                                <div class="mb-3"><input class="form-control" type="text" id="name-2" name="name" placeholder="Name"></div>
-                                                <div class="mb-3"><input class="form-control" type="email" id="email-2" name="email" placeholder="Email"></div>
-                                                <div class="mb-3"><textarea class="form-control" id="message-2" name="message" rows="6" placeholder="Message"></textarea></div>
-                                                <div><button class="btn btn-primary d-block w-100" type="submit">Send </button></div>
+                                            <h2 class="modal-title text-center">Contact Committee</h2>
+                                            <form name="sentMessage" id="contactForm" method="POST">
+                                                <div class="mb-3">
+                                                    <input class="form-control" type="text" id="nameForm" name="name" placeholder="Name" required data-validation-required-message="Please enter your Name">
+                                                </div>
+                                                <div class="mb-3">
+                                                    <input class="form-control" type="email" id="emailForm" name="email" placeholder="Email" required data-validation-required-message="Please enter your Email">
+                                                </div>
+                                                <div class="mb-3">
+                                                    <textarea class="form-control" type="text" id="messageForm" name="message" rows="6" placeholder="Message"></textarea>
+                                                </div>
+                                                <div class="mb-3">
+                                                    <input class="form-control" type="text" id="wordForm" name="word" placeholder="Enter your favourite word! (verification)">
+                                                </div>
+                                                <div>
+                                                    <button class="btn btn-primary d-block w-100" type="submit">Send </button>
+                                                </div>
                                             </form>
                                         </div>
                                     </div>
@@ -246,7 +266,6 @@
                             </div>
                         </div>
                     </section>
-                    <p>Alternatively send an email to: email@email.com<br>Or phone: +44 1234 123456</p>
                 </div>
                 <div class="modal-footer"><button class="btn btn-light" type="button" data-bs-dismiss="modal">Close</button></div>
             </div>

@@ -37,6 +37,15 @@
             </div>
         </div>
     </nav>
+    {% if message_sent %}
+        <div class="alert alert-success" role="alert" style="max-width: 600px; text-align: center; margin: 100px auto -50px;">
+            Message sent successfully.
+        </div>
+    {% elif message_failed %}
+        <div class="alert alert-danger" role="alert" style="max-width: 600px; text-align: center; margin: 100px auto -50px;">
+            Message failed to send.<br>Your word may not be a real word or there was a server error.
+        </div>
+    {% endif %}
     <header class="text-center text-white masthead" style="padding: 114px 0px 148px;padding-top: 0px;background: #ffffff00;padding-bottom: 0px;">
         <h1 class="masthead-heading mb-0" style="margin: 100px;color: var(--bs-emphasis-color);font-size: 65px;">Staging and Music Hire</h1>
     </header>
@@ -59,13 +68,25 @@
             <div class="row align-items-center">
                 <div class="col-lg-6 order-lg-1">
                     <div class="text-center p-5">
-                        <h4 class="text-center"><strong>Staging Hire</strong></h4><a class="btn btn-primary" role="button" style="font-size: 20px;margin: 5px;" data-bs-toggle="modal" data-bs-target="#contactUsStaging">Make an Enquiry</a>
+                        <h4 class="text-center">
+                            <strong>Staging Hire</strong>
+                        </h4>
+                        <a class="btn btn-primary" role="button" style="font-size: 20px;margin: 5px;" data-bs-toggle="modal" data-bs-target="#contactUsStaging">
+                            Make an Enquiry
+                        </a>
                     </div>
                 </div>
                 <div class="col-lg-6 order-lg-2">
                     <div class="p-5">
                         <h4 class="text-center"><strong>Music Hire</strong></h4>
-                        <div class="d-flex justify-content-evenly"><a class="btn btn-primary" role="button" style="font-size: 20px;margin: 5px;" data-bs-toggle="modal" data-bs-target="#vocalScoresModal">See availale Vocal Scores</a><a class="btn btn-primary" role="button" style="font-size: 20px;margin: 5px;" data-bs-toggle="modal" data-bs-target="#contactUsMusic">Make an Enquiry</a></div>
+                        <div class="d-flex justify-content-evenly">
+                            <a class="btn btn-primary" role="button" style="font-size: 20px;margin: 5px;" data-bs-toggle="modal" data-bs-target="#vocalScoresModal">
+                                See availale Vocal Scores
+                            </a>
+                            <a class="btn btn-primary" role="button" style="font-size: 20px;margin: 5px;" data-bs-toggle="modal" data-bs-target="#contactUsMusic">
+                                Make an Enquiry
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -87,12 +108,23 @@
                                 <div class="col-md-8 col-lg-6 col-xl-5 col-xxl-4" style="width: 100%;">
                                     <div class="card mb-1" style="margin-bottom: 0px;">
                                         <div class="card-body p-sm-5">
-                                            <h2 class="modal-title text-center">Contact Us about Staging Hire</h2>
-                                            <form method="post">
-                                                <div class="mb-3"><input class="form-control" type="text" id="name-2" name="name" placeholder="Name"></div>
-                                                <div class="mb-3"><input class="form-control" type="email" id="email-2" name="email" placeholder="Email"></div>
-                                                <div class="mb-3"><textarea class="form-control" id="message-2" name="message" rows="6" placeholder="Message"></textarea></div>
-                                                <div><button class="btn btn-primary d-block w-100" type="submit">Send </button></div>
+                                            <h2 class="modal-title text-center">Make an enquiry for Staging Hire</h2>
+                                            <form name="sentMessage" id="contactForm1" method="POST">
+                                                <div class="mb-3">
+                                                    <input class="form-control" type="text" id="nameForm1" name="name" placeholder="Name" required data-validation-required-message="Please enter your Name">
+                                                </div>
+                                                <div class="mb-3">
+                                                    <input class="form-control" type="email" id="emailForm1" name="email" placeholder="Email" required data-validation-required-message="Please enter your Email">
+                                                </div>
+                                                <div class="mb-3">
+                                                    <textarea class="form-control" type="text" id="messageForm1" name="message" rows="6" placeholder="Message"></textarea>
+                                                </div>
+                                                <div class="mb-3">
+                                                    <input class="form-control" type="text" id="wordForm" name="word" placeholder="Enter your favourite word! (verification)">
+                                                </div>
+                                                <div>
+                                                    <button class="btn btn-primary d-block w-100" type="submit" name="staging">Send </button>
+                                                </div>
                                             </form>
                                         </div>
                                     </div>
@@ -116,12 +148,23 @@
                                 <div class="col-md-8 col-lg-6 col-xl-5 col-xxl-4" style="width: 100%;">
                                     <div class="card mb-1" style="margin-bottom: 0px;">
                                         <div class="card-body p-sm-5">
-                                            <h2 class="modal-title text-center">Contact Us about Music Hire</h2>
-                                            <form method="post">
-                                                <div class="mb-3"><input class="form-control" type="text" id="name-1" name="name" placeholder="Name"></div>
-                                                <div class="mb-3"><input class="form-control" type="email" id="email-1" name="email" placeholder="Email"></div>
-                                                <div class="mb-3"><textarea class="form-control" id="message-1" name="message" rows="6" placeholder="Message"></textarea></div>
-                                                <div><button class="btn btn-primary d-block w-100" type="submit">Send </button></div>
+                                            <h2 class="modal-title text-center">Make an enquiry for Music Hire</h2>
+                                            <form name="sentMessage" id="contactForm2" method="POST">
+                                                <div class="mb-3">
+                                                    <input class="form-control" type="text" id="nameForm2" name="name" placeholder="Name" required data-validation-required-message="Please enter your Name">
+                                                </div>
+                                                <div class="mb-3">
+                                                    <input class="form-control" type="email" id="emailForm2" name="email" placeholder="Email" required data-validation-required-message="Please enter your Email">
+                                                </div>
+                                                <div class="mb-3">
+                                                    <textarea class="form-control" type="text" id="messageForm2" name="message" rows="6" placeholder="Message"></textarea>
+                                                </div>
+                                                <div class="mb-3">
+                                                    <input class="form-control" type="text" id="wordForm" name="word" placeholder="Enter your favourite word! (verification)">
+                                                </div>
+                                                <div>
+                                                    <button class="btn btn-primary d-block w-100" type="submit" name="music">Send </button>
+                                                </div>
                                             </form>
                                         </div>
                                     </div>

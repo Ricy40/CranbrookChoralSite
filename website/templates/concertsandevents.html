@@ -45,12 +45,20 @@
             <div class="row gy-3">
                 <div class="col-md-6">
                     <div class="programme-event">
-                        <img class="concert-poster" src="{{ url_for('static', filename='img/Summer_Concert_2024.png') }}"><a class="btn btn-primary" role="button" style="font-size: 20px;margin: auto;margin-top: 20px;" data-bs-toggle="modal" data-bs-target="#pastConcertsModal">Tickets</a></div>
+                        <h3>Our Last Concert</h3>
+                        <img class="concert-poster" src="{{ url_for('static', filename='img/Summer_Concert_2024.png') }}">
+                        <!-- <a class="btn btn-primary" role="button" style="font-size: 20px;margin: auto;margin-top: 20px;">Tickets</a> -->
+                    </div>
                 </div>
                 <div class="col-md-6">
                     <div class="programme-event">
                         <h3>Upcoming Concerts</h3>
-                        <p class="text-start concert-paragraph">Summer concert – Saturday 22 June 2024 - Musicals, Madrigals and Melodies<br><br>Autumn concert – Saturday 16 November 2024 - Faure and Durufle Requiems<br><br>Christmas concert – Saturday 14 December 2024 - With Cranbrook Town Band<br><br>Spring concert - Saturday 5 April 2025 - St Mark Passion and other works for Passiontide<br><br>Summer concert - Saturday 21 June 2025 - With local school choirs<br><br>Autumn concert - Saturday 15 November 2025 - Haydn Nelson Mass and other works<br><br>Christmas concert - Saturday 20 December 2025 - With Cranbrook Town Band</p>
+                        <p class="text-start concert-paragraph">Autumn concert – Saturday 16 November 2024 - Faure and Durufle Requiems<br>
+                            <br>Christmas concert – Saturday 14 December 2024 - With Cranbrook Town Band<br>
+                            <br>Spring concert - Saturday 5 April 2025 - St Mark Passion and other works for Passiontide<br>
+                            <br>Summer concert - Saturday 21 June 2025 - With local school choirs<br>
+                            <br>Autumn concert - Saturday 15 November 2025 - Haydn Nelson Mass and other works<br>
+                            <br>Christmas concert - Saturday 20 December 2025 - With Cranbrook Town Band</p>
                         <p class="text-start concert-paragraph" style="margin-top: 25px;"></p>
                     </div>
                 </div>
@@ -95,10 +103,30 @@
                 </div>
                 <div class="modal-body">
                     <div style="padding: 10px;text-align: center;">
-                        <p style="font-size: 20px;margin: auto;margin-bottom: 5px;max-width: 800px;text-align: left;font-family: Lato, sans-serif;padding: 21px;margin-top: 5px;background: whitesmoke;"><span style="text-decoration: underline; color: rgb(51, 51, 51);">2024</span><br><br><span style="color: rgb(51, 51, 51);">Spring Concert - Petite Messe Solennelle</span></p>
-                        <p style="font-size: 20px;margin: auto;margin-bottom: 5px;max-width: 800px;text-align: left;font-family: Lato, sans-serif;padding: 21px;margin-top: 5px;background: whitesmoke;"><span style="text-decoration: underline; color: rgb(51, 51, 51);">2023</span><br><br><span style="color: rgb(51, 51, 51);">Christmas concert – St Dunstan’s with Cranbrook Town Band</span><br><br><span style="color: rgb(51, 51, 51);">Autumn Concert – Britten, Saint Nicolas</span><br><br><span style="color: rgb(51, 51, 51);">Summer Concert – Headcorn church with Headcorn Primary School</span><br><br><span style="color: rgb(51, 51, 51);">Spring Concert - Handel’s Coronation Anthems,&nbsp;Haydn St Nicolas</span><br><span style="color: rgb(51, 51, 51);"> Mass</span><br><br></p>
-                        <p style="font-size: 20px;margin: auto;margin-bottom: 5px;max-width: 800px;text-align: left;font-family: Lato, sans-serif;padding: 21px;margin-top: 5px;background: whitesmoke;"><span style="text-decoration: underline; color: rgb(51, 51, 51); background-color: rgba(245, 245, 245, 0);">2022</span><br><br><span style="color: rgb(51, 51, 51); background-color: rgba(245, 245, 245, 0);">Christmas concert – St Dunstan’s with Cranbrook Town Band</span><br><br><span style="color: rgb(51, 51, 51); background-color: rgba(245, 245, 245, 0);">Autumn concert - Dvorak , Stabat Mater</span><br><br><span style="color: rgb(51, 51, 51); background-color: rgba(245, 245, 245, 0);">Summer concert – Marden Church</span><br><br><span style="color: rgb(51, 51, 51); background-color: rgba(245, 245, 245, 0);">Spring concert – An evening of British Music:&nbsp; Rutter, Requiem, and two pieces by&nbsp;Parry</span></p>
-                        <p style="font-size: 20px;margin: auto;margin-bottom: 5px;max-width: 800px;text-align: left;font-family: Lato, sans-serif;padding: 21px;margin-top: 5px;background: whitesmoke;"><span style="text-decoration: underline;">2021</span><br><br>Christmas concert – Handel, Messiah</p>
+                        <p style="font-size: 20px;margin: auto;margin-bottom: 5px;max-width: 800px;text-align: left;font-family: Lato, sans-serif;padding: 21px;margin-top: 5px;background: whitesmoke;">
+                            <span style="text-decoration: underline; color: rgb(51, 51, 51);">2024</span><br><br>
+                            <span style="color: rgb(51, 51, 51);">Summer Concert - Musicals, Madrigals and Melodies</span><br><br>
+                            <span style="color: rgb(51, 51, 51);">Spring Concert - Rossini Petite Messe Solennelle</span>
+                        </p>
+                        <p style="font-size: 20px;margin: auto;margin-bottom: 5px;max-width: 800px;text-align: left;font-family: Lato, sans-serif;padding: 21px;margin-top: 5px;background: whitesmoke;">
+                            <span style="text-decoration: underline; color: rgb(51, 51, 51);">2023</span><br><br>
+                            <span style="color: rgb(51, 51, 51);">Christmas concert – St Dunstan’s with Cranbrook Town Band</span><br><br>
+                            <span style="color: rgb(51, 51, 51);">Autumn Concert – Britten, Saint Nicolas</span><br><br>
+                            <span style="color: rgb(51, 51, 51);">Summer Concert – Headcorn church with Headcorn Primary School</span><br><br>
+                            <span style="color: rgb(51, 51, 51);">Spring Concert - Handel’s Coronation Anthems,&nbsp;Haydn St Nicolas</span><br>
+                            <span style="color: rgb(51, 51, 51);">Mass</span><br><br>
+                        </p>
+                        <p style="font-size: 20px;margin: auto;margin-bottom: 5px;max-width: 800px;text-align: left;font-family: Lato, sans-serif;padding: 21px;margin-top: 5px;background: whitesmoke;">
+                            <span style="text-decoration: underline; color: rgb(51, 51, 51); background-color: rgba(245, 245, 245, 0);">2022</span><br><br>
+                            <span style="color: rgb(51, 51, 51); background-color: rgba(245, 245, 245, 0);">Christmas concert – St Dunstan’s with Cranbrook Town Band</span><br><br>
+                            <span style="color: rgb(51, 51, 51); background-color: rgba(245, 245, 245, 0);">Autumn concert - Dvorak , Stabat Mater</span><br><br>
+                            <span style="color: rgb(51, 51, 51); background-color: rgba(245, 245, 245, 0);">Summer concert – Marden Church</span><br><br>
+                            <span style="color: rgb(51, 51, 51); background-color: rgba(245, 245, 245, 0);">Spring concert – An evening of British Music:&nbsp; Rutter, Requiem, and two pieces by&nbsp;Parry</span>
+                        </p>
+                        <p style="font-size: 20px;margin: auto;margin-bottom: 5px;max-width: 800px;text-align: left;font-family: Lato, sans-serif;padding: 21px;margin-top: 5px;background: whitesmoke;">
+                            <span style="text-decoration: underline;">2021</span><br>
+                            <br>Christmas concert – Handel, Messiah
+                        </p>
                     </div>
                 </div>
                 <div class="modal-footer"><button class="btn btn-light" type="button" data-bs-dismiss="modal">Close</button></div>
@@ -131,7 +159,11 @@
                 </div>
                 <div class="modal-body">
                     <div style="padding: 10px;text-align: center;">
-                        <p style="font-size: 20px;margin: auto;margin-bottom: 5px;max-width: 800px;text-align: left;font-family: Lato, sans-serif;padding: 21px;margin-top: 5px;background: whitesmoke;">In 2016 we went to Belgium, the highlight of which was singing at the Menin Gate on the Saturday evening after a day looking round Ypres and the Tyne Cot First World War cemetery. Truly memorable for us all. We also performed in Ghent and Bruges.<br><br>In 2018 the choir travelled to Holland with concerts in beautiful churches in Amsterdam and Delft and the old coastal town of Monnickendam.<br><br>With a couple of years break from touring and singing generally due to the Covid pandemic, 2023 found us touring to Normandy. We enjoyed visiting many of the second World War sites, especially the newly built museum at Arromanches and the Bayeux Tapestry. Our three concerts on this trip were at Alencon, Argentan and Fougeres.</p>
+                        <p style="font-size: 20px;margin: auto;margin-bottom: 5px;max-width: 800px;text-align: left;font-family: Lato, sans-serif;padding: 21px;margin-top: 5px;background: whitesmoke;">
+                            In 2016 we went to Belgium, the highlight of which was singing at the Menin Gate on the Saturday evening after a day looking round Ypres and the Tyne Cot First World War cemetery. Truly memorable for us all. We also performed in Ghent and Bruges.<br><br>
+                            In 2018 the choir travelled to Holland with concerts in beautiful churches in Amsterdam and Delft and the old coastal town of Monnickendam.<br><br>
+                            With a couple of years break from touring and singing generally due to the Covid pandemic, 2023 found us touring to Normandy. We enjoyed visiting many of the second World War sites, especially the newly built museum at Arromanches and the Bayeux Tapestry. Our three concerts on this trip were at Alencon, Argentan and Fougeres.
+                        </p>
                     </div>
                 </div>
                 <div class="modal-footer"><button class="btn btn-light" type="button" data-bs-dismiss="modal">Close</button></div>

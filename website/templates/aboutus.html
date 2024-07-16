@@ -37,6 +37,15 @@
             </div>
         </div>
     </nav>
+    {% if message_sent %}
+        <div class="alert alert-success" role="alert" style="max-width: 600px; text-align: center; margin: 100px auto -50px;">
+            Message sent successfully.
+        </div>
+    {% elif message_failed %}
+        <div class="alert alert-danger" role="alert" style="max-width: 600px; text-align: center; margin: 100px auto -50px;">
+            Message failed to send.<br>Your word may not be a real word or there was a server error.
+        </div>
+    {% endif %}
     <header class="text-center text-white masthead" style="padding: 114px 0px 148px;padding-top: 0px;background: #ffffff00;padding-bottom: 0px;">
         <h1 class="masthead-heading mb-0" style="margin: 100px;color: var(--bs-emphasis-color);font-size: 65px;">About Us</h1>
     </header>
@@ -46,7 +55,7 @@
                 <div class="p-5" style="background: whitesmoke;">
                     <h2 style="text-align: center;"><strong>We stage four concerts a year</strong></h2>
                     <p style="font-size: 20px;text-align: center;">Our formal concerts are in the Spring and Autumn every year. For these concerts, we perform with professional soloists and instrumentalists as well as the Cranbrook Sinfonia.</p>
-                    <p style="font-size: 20px;text-align: center;">At Christmas we have a concert packed with festive music that we perform with Cranbrook Town Band.&nbsp;</p>
+                    <p style="font-size: 20px;text-align: center;">At Christmas we have a concert packed with festive music that we perform with the Cranbrook Town Band.&nbsp;</p>
                     <p style="font-size: 20px;text-align: center;">Our Summer concert comprises shorter, less known pieces and we sometimes join together with local schools or other choirs.&nbsp;</p>
                     <p style="font-size: 20px;text-align: center;">Some of our concerts are to raise funds for charity.</p>
                 </div>
@@ -88,7 +97,7 @@
         <div class="container py-4 py-xl-5">
             <div class="row mb-4 mb-lg-5">
                 <div class="col-md-8 col-xl-6 text-center mx-auto" style="width: 800px;">
-                    <h2 class="display-5" style="text-align: center;"><strong>Meet our Regular Collaborators</strong></h2>
+                    <h2 class="display-5" style="text-align: center;"><strong>Meet our regular collaborators</strong></h2>
                 </div>
             </div>
             <div class="row gy-4 row-cols-2 row-cols-md-4 justify-content-center">
@@ -184,11 +193,12 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h4 class="modal-title">Cranbrook Sinfonia</h4><button class="btn-close" type="button" aria-label="Close" data-bs-dismiss="modal"></button>
+                    <h4 class="modal-title">Cranbrook Sinfonia</h4>
+                    <button class="btn-close" type="button" aria-label="Close" data-bs-dismiss="modal"></button>
                 </div>
                 <div class="modal-body" style="text-align: center;">
                     <img style="margin: 10px;width: 300px;height: auto;" src="{{ url_for('static', filename='img/sinfonia_image_2.jpg') }}">
-                    <p style="text-align: left;">Cranbrook Sinfonia is a group of mainly local professionals, including ex-London orchestral players and instrumental teachers who convene on an occasional basis under the leadership of Ingrid Sellschop, and in particular to provide orchestral support for Cranbrook Choral Society.</p>
+                    <p style="text-align: left;">Cranbrook Sinfonia is a group of mainly local professionals, including ex-London orchestral players and instrumental teachers. They convene on an occasional basis under the leadership of Ingrid Sellschop and, in particular, to provide orchestral support for the Cranbrook Choral Society.</p>
                 </div>
                 <div class="modal-footer"><button class="btn btn-light" type="button" data-bs-dismiss="modal">Close</button></div>
             </div>
@@ -198,11 +208,16 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h4 class="modal-title">Cranbrook Town Band</h4><button class="btn-close" type="button" aria-label="Close" data-bs-dismiss="modal"></button>
+                    <h4 class="modal-title">Cranbrook Town Band</h4>
+                    <button class="btn-close" type="button" aria-label="Close" data-bs-dismiss="modal"></button>
                 </div>
                 <div class="modal-body" style="text-align: center;">
                     <img style="margin: 10px;width: 400px;" src="{{ url_for('static', filename='img/town-band.jpg') }}">
-                    <p style="text-align: left;"><span style="color: rgb(51, 51, 51);">Cranbrook Town Band is a regular collaborator at our Christmas concerts.&nbsp;It is comprised of about 30 regular brass players who live in Cranbrook and the surrounding areas.</span><br><br><span style="color: rgb(51, 51, 51);">The history of the Town band goes back to the 1920′s. It has enjoyed mixed fortunes over the years and the present band was re-formed in the 1960s. Since that time it has gradually grown in membership and the standard of playing has progressed steadily.</span></p><a href="https://www.cranbrooktownband.org.uk/" target="_blank">cranbrooktownband.org.uk</a>
+                    <p style="text-align: left;">
+                        <span style="color: rgb(51, 51, 51);">The Cranbrook Town Band is a regular collaborator at our Christmas concerts. It comprises about 30 regular brass players who live in Cranbrook and the surrounding areas.</span><br><br>
+                        <span style="color: rgb(51, 51, 51);">The history of the Town Band goes back to the 1920s.</span>
+                    </p>
+                    <a href="https://www.cranbrooktownband.org.uk/" target="_blank">cranbrooktownband.org.uk</a>
                 </div>
                 <div class="modal-footer"><button class="btn btn-light" type="button" data-bs-dismiss="modal">Close</button></div>
             </div>
@@ -246,7 +261,7 @@
                     <h4 class="modal-title">History of the Cranbrook Choral Society</h4><button class="btn-close" type="button" aria-label="Close" data-bs-dismiss="modal"></button>
                 </div>
                 <div class="modal-body" style="text-align: center;">
-                    <p style="text-align: left;">Occasional choral concerts have been staged in Cranbrook since Victorian times, but these were put on a more regular footing in the 1950s by Mrs Russell-Scott, wife of the headmaster at Cranbrook School and comprised mainly of ladies from the WI.<br><br>In 1969 the group was formed into the present society with over 70 members under the baton of Dr Julian Tower. It presented many of the greatest works in the choral repertoire, mainly Oratorios, Masses and Requiems and attracted soloists who have gone on to the very top of their profession.<br><br>In 1987, the Director of Music at Cranbrook School, Malcolm Riley, came to the podium. Under his leadership the choir grew in number and in the ambitious works undertaken.&nbsp;<br><br>In 2012, leadership of the choir was handed to Jeffrey Gray. The choir continued to flourish and grow in confidence over the next 12 years, and through the difficult times of Covid. Jeffrey moved on in December 2023.&nbsp;<br><br>Leading soloists continue to grace our performances, none of them more prominent than our former President, Philip Langridge, who gave us inspirational support. We are thrilled that his son Stephen is now our president.</p>
+                    <p style="text-align: left;">Occasional choral concerts have been staged in Cranbrook since Victorian times, but these were put on a more regular footing in the 1950s by Mrs Russell-Scott, wife of the headmaster at Cranbrook School and comprised mainly of ladies from the WI.<br><br>In 1969 the group was formed into the present society with over 70 members under the baton of Dr Julian Tower. It presented many of the greatest works in the choral repertoire, mainly Oratorios, Masses and Requiems and attracted soloists who have gone on to the very top of their profession.<br><br>In 1987, the Director of Music at Cranbrook School, Malcolm Riley, came to the podium. Under his leadership the choir grew in number and in the ambitious works undertaken.&nbsp;<br><br>In 2012, leadership of the choir was handed to Jeffrey Gray. The choir continued to flourish and grow in confidence over the next 12 years and through the difficult times of Covid. Jeffrey moved on in December 2023.&nbsp;<br><br>Leading soloists continue to grace our performances, none of them more prominent than our former President, Philip Langridge, who gave us inspirational support. We are thrilled that his son Stephen is now our president.</p>
                 </div>
                 <div class="modal-footer"><button class="btn btn-light" type="button" data-bs-dismiss="modal">Close</button></div>
             </div>
@@ -256,19 +271,30 @@
         <div class="modal-dialog modal-lg modal-fullscreen-sm-down" role="document">
             <div class="modal-content">
                 <div class="modal-header"><button class="btn-close" type="button" aria-label="Close" data-bs-dismiss="modal"></button></div>
-                <div class="modal-body">
-                    <section class="position-relative py-4" style="padding: 0px;">
+                <div class="modal-body" style="padding-bottom: 0px;">
+                    <section class="position-relative py-1" style="padding: 0px;">
                         <div class="container position-relative">
                             <div class="row d-flex justify-content-center">
                                 <div class="col-md-8 col-lg-6 col-xl-5 col-xxl-4" style="width: 100%;">
-                                    <div class="card mb-5">
+                                    <div class="card mb-1" style="margin-bottom: 0px;">
                                         <div class="card-body p-sm-5">
-                                            <h2 class="modal-title text-center">Contact The Treasurer</h2>
-                                            <form method="post">
-                                                <div class="mb-3"><input class="form-control" type="text" id="name-2" name="name" placeholder="Name"></div>
-                                                <div class="mb-3"><input class="form-control" type="email" id="email-2" name="email" placeholder="Email"></div>
-                                                <div class="mb-3"><textarea class="form-control" id="message-2" name="message" rows="6" placeholder="Message"></textarea></div>
-                                                <div><button class="btn btn-primary d-block w-100" type="submit">Send </button></div>
+                                            <h2 class="modal-title text-center">Contact the Treasurer</h2>
+                                            <form name="sentMessage" id="contactForm" method="POST">
+                                                <div class="mb-3">
+                                                    <input class="form-control" type="text" id="nameForm" name="name" placeholder="Name" required data-validation-required-message="Please enter your Name">
+                                                </div>
+                                                <div class="mb-3">
+                                                    <input class="form-control" type="email" id="emailForm" name="email" placeholder="Email" required data-validation-required-message="Please enter your Email">
+                                                </div>
+                                                <div class="mb-3">
+                                                    <textarea class="form-control" type="text" id="messageForm" name="message" rows="6" placeholder="Message"></textarea>
+                                                </div>
+                                                <div class="mb-3">
+                                                    <input class="form-control" type="text" id="wordForm" name="word" placeholder="Enter your favourite word! (verification)">
+                                                </div>
+                                                <div>
+                                                    <button class="btn btn-primary d-block w-100" type="submit">Send </button>
+                                                </div>
                                             </form>
                                         </div>
                                     </div>
