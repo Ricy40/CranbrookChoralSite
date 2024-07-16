@@ -2,7 +2,7 @@ import os
 from spellchecker import SpellChecker
 
 from flask import Blueprint, render_template, request
-from flask_mail import Mail, Message
+from flask_mail import Message
 
 from . import mail
 
